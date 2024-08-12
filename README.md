@@ -269,3 +269,13 @@ python3 onnx2om.py
 
 将onnx模型转为om模型，可通过config.yaml文件修改路径和相关参数。
 om模型将保存在./output目录下
+
+进行推理：首先将标签填入./edge_infer/lablenames.txt文件中，然后将./edge_infer/yolov5_infer.py中模型文件路径及标签文件路径填入，并选择推理模式，如使用图片或视频，请填写其路径。
+
+修改完毕后，在该目录下执行命令：
+
+```
+python3 yolov5_infer.py
+```
+
+进行推理
