@@ -1,13 +1,9 @@
-# Fish
-Fish detection + Shandong University
+# Fish detection
 
+## 1、主要代码文件
 
-
-## 2、主要代码文件
-
-### （1）test_stage_DCSPM.py
-
-用来测试 DCSPM 模型的各项指标如：dice, iou, precision, recall, hd95, acc。(acc：dice≥0.9的分割结果记为正例)。
+### （1）PC端需要准备的文件
+yolov5官方库,预训练文件yolov5s.pt. 
 
 ```python
 # 模型输入格式 [batch, channel, height, width] 
