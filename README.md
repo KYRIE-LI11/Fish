@@ -5,26 +5,23 @@
 ### （1）PC端需要准备的文件
 yolov5官方库,预训练文件yolov5s.pt. 
 
-```python
-# 模型输入格式 [batch, channel, height, width] 
-# 训练使用数据 (batch, 1, 128, 128)
-# 模型输出格式 [batch, 2, height, width], 2 是二分类。
-```
-
 代码运行命令：
+```
+conda activate yolov5
+```
 
 ```
-python test_stage_DCSPM.py --data_path='./data' --bs=1 --shape=128
+python train.py --data fish.yaml --epochs 300 --weights 'yolov5s.pt' --cfg yolov5s.yaml  --batch-size 32
 ```
 
+在鱼类数据集上微调后，可利用yolov5官网库中的脚本将pt文件转换为onnx文件
+```
+python export.py --weights 训练好的pt模型路径 --include onnx --opset 11
+```
 注意：
 
-> 1.  运行时 data_path='./data' 中的 ' ./data ' 需要更换为自己的数据集路径；
-> 2.  指标计算函数 evaluate_mc_statistic 按照 batch 计算，**bs=1** 时计算结果准确，不要改这个；
-> 3.  预训练好的 DCSPM_v0.pth 固定输入大小为 **(128*128)**，因此运行时 shape 也需要是 128 ；
-> 4.  get_args() 可以增加外部命令传入参数，可以自行添加其它控制；
-> 5.  Alone_Dataset_mc 类 用于加载数据集，可以自行编写替换；
-> 6.  evaluate_mc_statistic 函数中执行前向推理预测分割结果，返回计算指标 dice, iou, precision, recall, hd95, acc等。
+> 1. 在训练过程中,fish.yaml是经过重写的,参考"data/fish.yaml"
+> 2. 在模型转换过程中,考虑青云设备的算子支持,必须设置--opset 11
 
 ### （2）post_process.py
 
