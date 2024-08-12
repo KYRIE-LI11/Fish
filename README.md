@@ -14,7 +14,7 @@ conda activate yolov5
 python train.py --data fish.yaml --epochs 300 --weights 'yolov5s.pt' --cfg yolov5s.yaml  --batch-size 32
 ```
 
-在鱼类数据集上微调后，可利用yolov5官网库中的脚本将pt文件转换为onnx文件
+在鱼类数据集上微调后，可利用yolov5官网库中的脚本将pt文件转换为onnx文件:
 ```
 python export.py --weights 训练好的pt模型路径 --include onnx --opset 11
 ```
