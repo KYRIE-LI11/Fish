@@ -44,6 +44,7 @@ python post_process.py --data_path='./data' --bs=1 --shape=128 --post=True
 ###(2)NPU测试所需文件
 infer_project文件夹：
 
+```
 infer_project
 ├── benchmark.aarch64
 ├── common
@@ -256,7 +257,7 @@ infer_project
 │   └── triton.py
 ├── yolov5s.onnx
 └── yolov5s.pt
-
+```
 
 
 
