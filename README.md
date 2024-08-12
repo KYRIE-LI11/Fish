@@ -22,6 +22,7 @@ python export.py --weights 训练好的pt模型路径 --include onnx --opset 11
 
 > 1. 在训练过程中,fish.yaml是经过重写的,参考"data/fish.yaml"
 > 2. 在模型转换过程中,考虑青云设备的算子支持,必须设置--opset 11
+> 3. 训练及转换后的权重文件存放路径："yolov5/runs/train/exp2"
 
 ### （2）post_process.py
 
