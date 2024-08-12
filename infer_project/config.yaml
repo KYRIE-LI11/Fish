@@ -1,0 +1,78 @@
+detection:
+  output_path: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output
+  labelme_dataset_path: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\JPEGImages
+  yolo_dataset_yaml_path: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\trans_output\data.yaml
+  trans_output: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\trans_output
+  train_output: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\train_output
+  class_num: 1
+  split_ratio: 0.3
+  split_test: true
+  weights: yolov5s
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B4
+  earlystopping_enabled: false
+  earlystopping_threshold: 0.99
+  earlystopping_tolerance: 10
+classification:
+  output_path: E:\0-cls\output
+  labelme_dataset_path: E:\0-cls\cat_dog
+  class_txt_path: E:\0-cls\flags.txt
+  trans_output: E:\0-cls\output\trans_output
+  train_output: E:\0-cls\output\train_output
+  class_num: 2
+  split_ratio: 0.3
+  split_test: true
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B4
+  earlystopping_enabled: false
+  earlystopping_threshold: 0.99
+  earlystopping_tolerance: 10
+segmentation:
+  output_path: G:\MyDataset\output\output
+  labelme_dataset_path: G:\MyDataset\labeledphotos\output\trans_output\separated_dataset\0_robot
+  trans_output: G:\MyDataset\output\output\trans_output
+  train_output: G:\MyDataset\output\output\train_output
+  split_ratio: 0.3
+  split_test: true
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B4
+  earlystopping_enabled: false
+  earlystopping_threshold: 0.99
+  earlystopping_tolerance: 10
+keypoint:
+  output_path: E:\output\output
+  labelme_dataset_path: E:\3-key_point\data_set
+  yolo_dataset_yaml_path: null
+  trans_output: E:\output\output\trans_output
+  train_output: E:\output\output\train_output
+  class_num: null
+  split_ratio: 0.3
+  split_test: true
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B4
+  earlystopping_enabled: false
+  earlystopping_threshold: 0.99
+  earlystopping_tolerance: 10

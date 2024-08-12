@@ -1,0 +1,91 @@
+{
+    "graph_fusion": {
+        "BatchNorm3DFusionPass": {
+            "effect_times": "0",
+            "match_times": "8"
+        },
+        "BatchNormBnInferFusionPass": {
+            "effect_times": "8",
+            "match_times": "8"
+        },
+        "BatchNormPreprocessFusionPass": {
+            "effect_times": "8",
+            "match_times": "8"
+        },
+        "ConstToAttrPass": {
+            "effect_times": "11",
+            "match_times": "11"
+        },
+        "ConstToAttrStridedSliceV2Fusion": {
+            "effect_times": "6",
+            "match_times": "6"
+        },
+        "ConvConcatFusionPass": {
+            "effect_times": "8",
+            "match_times": "14"
+        },
+        "ConvToFullyConnectionFusionPass": {
+            "effect_times": "0",
+            "match_times": "70"
+        },
+        "ConvWeightCompressFusionPass": {
+            "effect_times": "0",
+            "match_times": "70"
+        },
+        "FusedBatchNormBertFusionPass": {
+            "effect_times": "0",
+            "match_times": "8"
+        },
+        "HostBNFusionPass": {
+            "effect_times": "8",
+            "match_times": "8"
+        },
+        "RefreshInt64ToInt32FusionPass": {
+            "effect_times": "1",
+            "match_times": "1"
+        },
+        "ReshapeTransposeFusionPass": {
+            "effect_times": "0",
+            "match_times": "3"
+        },
+        "SingleBatchNormFusion": {
+            "effect_times": "0",
+            "match_times": "8"
+        },
+        "SplitConvConcatFusionPass": {
+            "effect_times": "0",
+            "match_times": "14"
+        },
+        "StrideHoistingPass": {
+            "effect_times": "0",
+            "match_times": "51"
+        },
+        "StridedSliceRemovePass": {
+            "effect_times": "0",
+            "match_times": "6"
+        },
+        "TransdataCastFusionPass": {
+            "effect_times": "0",
+            "match_times": "90"
+        },
+        "TransposedUpdateFusionPass": {
+            "effect_times": "9",
+            "match_times": "9"
+        },
+        "ZConcatDFusionPass": {
+            "effect_times": "0",
+            "match_times": "14"
+        }
+    },
+    "session_and_graph_id": "0_0",
+    "ub_fusion": {
+        "TbeCommonRules0FusionPass": {
+            "effect_times": "67",
+            "match_times": "67"
+        },
+        "TbeEltwiseFusionPass": {
+            "effect_times": "8",
+            "match_times": "8"
+        }
+    }
+}

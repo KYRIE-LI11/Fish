@@ -1,0 +1,6 @@
+train: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\trans_output\train\images
+val: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\trans_output\valid\images
+test: G:\MyDataset\Fish_ZM(1)\Fish_Yudao\VOC2007\fish_output\output2\output\trans_output\test\images
+nc: 1
+names:
+  0: fish
