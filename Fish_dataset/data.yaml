@@ -1,0 +1,12 @@
+# dataset path
+path: /root/code/project/yolov8/
+#train: ./dataset/images/train
+train: /home/sdu01/lhq_wp/yolov8/Fish_dataset/images/train
+val: /home/sdu01/lhq_wp/yolov8/Fish_dataset/images/val
+test: /home/sdu01/lhq_wp/yolov8/Fish_dataset/images/test
+
+# number of classes
+nc: 3
+
+# class names
+names: ['Fish','Fish_black','person']
